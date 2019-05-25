@@ -14,7 +14,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    app.item.post_content = '<body style="background:#fff;position: relative;line-height:1.6;font-family:Microsoft YaHei,Helvetica,Tahoma,Arial,sans-serif">'+app.item.post_content+'/body>'
+    var reg = new RegExp("<p(.+)</p>$")
+    app.item.post_content = app.item.post_content.replace(reg, '<p style="line - height: 1.6; font - family: Microsoft YaHei, Helvetica, Tahoma, Arial, sans - serif $1</p>')
       this.setData({
          info: app.item
       })

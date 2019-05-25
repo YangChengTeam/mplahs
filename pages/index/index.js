@@ -17,6 +17,9 @@ Page({
   },
 
   async onLoad() {
+    var reg = new RegExp("<p(.+)</p>$")
+    var a = "<p></p>".replace(reg, "<p$1</p>")
+    console.log(a)
     this.loadData()
   },
 
@@ -41,6 +44,9 @@ Page({
       })
     } else {
       page--
+      this.setData({
+        loadstatus: 2
+      })
     }
   },
 

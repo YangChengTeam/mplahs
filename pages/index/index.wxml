@@ -45,6 +45,7 @@
        {{loadstatus == 0 ? "加载中..." : ""}}
        {{loadstatus == 1 ? "加载更多" : ""}}
        {{loadstatus == 2 ? "到底了" : ""}}
+       {{loadstatus == 3 ? "加载失败，请重试" : ""}}
     </view>
   </view>
 </view>
