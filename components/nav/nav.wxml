@@ -1,0 +1,11 @@
+<!--components/nav/nav.wxml-->
+<basenav opacity="{{opacity}}" isnop="{{isnop}}" background="{{background}}" color="{{color}}">
+  <view class="nav-content">
+    <image class="nav-back" wx:if="{{isback==1}}" src="../../assets/images/{{back_icon_path}}"></image>
+    <view class="nav-title">{{title}}</view>
+  </view>
+
+  <view class="nav-search" wx:if="{{issearch==1}}" >
+      <input placeholder-class='placeholder-input' type='text' placeholder='亲想找什么222呐？'></input>
+  </view>
+</basenav>

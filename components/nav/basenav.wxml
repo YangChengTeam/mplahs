@@ -1,0 +1,14 @@
+<!--components/nav/nav.wxml-->
+<view wx:if="{{isnop==0}}" style='height: {{totalTopHeight}}px; width:750rpx; '>
+</view>
+<view class="bar" style='background:{{background}}; height: {{totalTopHeight}}px; opacity: {{opacity}};'>
+  <view class="sep" style='height: {{totalTopHeight}}px; width:750rpx;'>
+  </view>
+</view>
+<view class="bar">
+  <view class="statusBar" style='height: {{statusBarHeight}}px; width:750rpx;'>
+  </view>
+  <view class="navBar" style='color:{{color}};line-height: {{titleBarHeight}}px;height: {{titleBarHeight}}px; width:750rpx;'>
+    <slot></slot>
+  </view>
+</view>

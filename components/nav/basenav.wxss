@@ -1,0 +1,20 @@
+/* components/nav/nav.wxss */
+.bar {
+   position: fixed;
+   left: 0;
+   top: 0;
+   z-index: 5;
+   background: rgba(0, 0, 0, 0)
+}
+
+.sep {
+  box-shadow: 0px 1px 0px rgba(0, 0, 0, .1)
+}
+
+.navBar {
+   font-size: 34rpx;
+   text-align: center;
+   position: relative;
+}
+
+

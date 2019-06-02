@@ -1,0 +1,16 @@
+/* pages/school/article_detail.wxss */
+
+.title {
+   height: 120rpx;
+   font-size: 36rpx;
+   color: #000;
+   line-height: 120rpx;
+   padding-left: 30rpx;
+}
+
+.content {
+   margin-left: 30rpx;
+   margin-right: 30rpx;
+   width: 690rpx;
+   overflow: hidden;
+}

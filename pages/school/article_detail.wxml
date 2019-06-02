@@ -1,0 +1,7 @@
+<!--pages/school/article_detail.wxml-->
+<view class="title">{{info.post_title}}</view>
+<view class="content">
+  <rich-text nodes="{{info.post_content}}" >
+
+  </rich-text>
+</view>

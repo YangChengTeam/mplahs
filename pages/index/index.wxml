@@ -1,0 +1,50 @@
+<!--index.wxml-->
+<view class="header">
+  <image src='../../assets/images/home_bg.jpg'></image>
+  <view class="search">
+    <view>请输入关建字搜索聊天话术</view>
+    <image src='../../assets/images/search2.png'></image>
+  </view>
+</view>
+
+<view class="top">
+  <view class="top-header">
+    <view class="top-header-bg"></view>
+    <view class="top-header-title">为你推荐</view>
+  </view>
+  <view class="top-menu">
+    <view class="top-menu-left">
+      <image src='../../assets/images/recommend1.png'></image>
+    </view>
+    <view class="top-menu-right">
+      <image src='../../assets/images/recommend2.png'></image>
+      <image src='../../assets/images/recommend3.png' style='margin-top:20rpx;'></image>
+    </view>
+  </view>
+</view>
+<view class="choice">
+  <view class="top-header choice-header">
+    <view class="top-header-bg"></view>
+    <view class="top-header-title">精选文章</view>
+  </view>
+
+  <view class="choice-list">
+    <view class="choice-item" wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" wx:key="id" bindtap='nav2detail' data-item="{{item}}">
+      <view class="choice-item-image-warrper">
+        <image src='{{item.image}}'></image>
+      </view>
+      <view class="choice-item-content">
+        <view class="choice-item-content-title">{{item.post_title}}</view>
+        <view class="choice-item-content-warrper">
+          <view class="choice-item-content-like-count">{{item.post_like}}人觉得有用</view>
+          <view class="choice-item-content-tag">{{item.category_name}}</view>
+        </view>
+      </view>
+    </view>
+    <view class="choice-more {{loadstatus == 2 ? 'choice-more-loadend' : ''}}" bindtap='loadData'>
+       {{loadstatus == 0 ? "加载中..." : ""}}
+       {{loadstatus == 1 ? "加载更多" : ""}}
+       {{loadstatus == 2 ? "到底了" : ""}}
+    </view>
+  </view>
+</view>

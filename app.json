@@ -1,0 +1,55 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/actualcombat/actualcombat",
+    "pages/found/found",
+    "pages/school/school",
+    "pages/my/my",
+    "pages/school/article_detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#a9a9a9",
+    "selectedColor": "#000000",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/images/tab_home.png",
+        "selectedIconPath": "assets/images/tab_home_selected.png"
+      },
+      {
+        "pagePath": "pages/actualcombat/actualcombat",
+        "text": "实战",
+        "iconPath": "assets/images/tab_chat.png",
+        "selectedIconPath": "assets/images/tab_chat_selected.png"
+      },
+      {
+        "pagePath": "pages/found/found",
+        "text": "发现",
+        "iconPath": "assets/images/tab_found.png",
+        "selectedIconPath": "assets/images/tab_found_selected.png"
+      },
+      {
+        "pagePath": "pages/school/school",
+        "text": "学堂",
+        "iconPath": "assets/images/tab_school.png",
+        "selectedIconPath": "assets/images/tab_school_selected.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "assets/images/tab_my.png",
+        "selectedIconPath": "assets/images/tab_my_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}
