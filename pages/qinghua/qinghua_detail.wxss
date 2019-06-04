@@ -23,7 +23,10 @@
    border-radius: 5rpx;
    padding: 20rpx;
    margin-left: 10rpx;
+   max-width: 500rpx;
 }
+
+
 
 .item2 {
   flex-direction:row-reverse;
