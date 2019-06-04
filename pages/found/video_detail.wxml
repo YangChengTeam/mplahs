@@ -1,0 +1,3 @@
+<!--pages/found/video_detail.wxml-->
+<video src='{{info.url}}' loop="{{true}}" autoplay="{{true}}">
+  </video>

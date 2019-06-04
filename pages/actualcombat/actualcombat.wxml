@@ -1,2 +1,10 @@
 <!--pages/actualcombat/actualcombat.wxml-->
-<text>pages/actualcombat/actualcombat.wxml</text>
+<view class="list">
+  <view class="item" wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" wx:key="id" bindtap='nav2detail' data-item="{{item}}">
+    <image src='../../assets/images/icon_sz.png'></image>
+    <view class="title">{{item.post_title}}</view>
+  </view>
+  <view class="more {{loadstatus == 2 ? 'more-loadend' : ''}}" bindtap='showList'>
+    {{loadstatus == 0 ? "加载中..." : ""}} {{loadstatus == 1 ? "加载更多" : ""}} {{loadstatus == 2 ? "到底了" : ""}} {{loadstatus == 3 ? "加载失败，请重试" : ""}}
+  </view>
+</view>

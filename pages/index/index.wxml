@@ -1,12 +1,11 @@
 <!--index.wxml-->
 <view class="header">
   <image src='../../assets/images/home_bg.jpg'></image>
-  <view class="search">
+  <view class="search" bindtap='nav2search'>
     <view>请输入关建字搜索聊天话术</view>
     <image src='../../assets/images/search2.png'></image>
   </view>
 </view>
-
 <view class="top">
   <view class="top-header">
     <view class="top-header-bg"></view>
@@ -14,11 +13,11 @@
   </view>
   <view class="top-menu">
     <view class="top-menu-left">
-      <image src='../../assets/images/recommend1.png'></image>
+      <image src='../../assets/images/recommend1.png' bindtap='nav2duihua'></image>
     </view>
     <view class="top-menu-right">
-      <image src='../../assets/images/recommend2.png'></image>
-      <image src='../../assets/images/recommend3.png' style='margin-top:20rpx;'></image>
+      <image src='../../assets/images/recommend2.png' bindtap='re2tab1'></image>
+      <image src='../../assets/images/recommend3.png' style='margin-top:20rpx;' bindtap='nav2qinghua'></image>
     </view>
   </view>
 </view>
@@ -41,11 +40,8 @@
         </view>
       </view>
     </view>
-    <view class="choice-more {{loadstatus == 2 ? 'choice-more-loadend' : ''}}" bindtap='loadData'>
-       {{loadstatus == 0 ? "加载中..." : ""}}
-       {{loadstatus == 1 ? "加载更多" : ""}}
-       {{loadstatus == 2 ? "到底了" : ""}}
-       {{loadstatus == 3 ? "加载失败，请重试" : ""}}
+    <view class="choice-more {{loadstatus == 2 ? 'choice-more-loadend' : ''}}" bindtap='showList'>
+      {{loadstatus == 0 ? "加载中..." : ""}} {{loadstatus == 1 ? "加载更多" : ""}} {{loadstatus == 2 ? "到底了" : ""}} {{loadstatus == 3 ? "加载失败，请重试" : ""}}
     </view>
   </view>
 </view>

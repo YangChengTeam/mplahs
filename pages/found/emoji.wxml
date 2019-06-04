@@ -1,0 +1,12 @@
+<!--pages/found/emoji.wxml-->
+<view class='list'>
+   <view class='item'>
+      <view class="info">
+        <view class="desp"></view>
+        <view class="more">更多</view>
+      </view>
+      <view class='sub-item-info'>
+          <view class="sub-item"></view>
+      </view>
+   </view>
+</view>

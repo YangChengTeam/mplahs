@@ -1,0 +1,33 @@
+<!--pages/search/search.wxml-->
+<view class="search">
+  <view class="search-wrapper">
+    <image src='../../assets/images/search.png'></image>
+    <input placeholder-class='input-placeholder' type='text' placeholder='请输入关建词搜索聊天话术' bindinput='input'></input>
+  </view>
+  <view class="search-btn" bindtap='search'>搜索</view>
+</view>
+
+<view class="mode">
+  <view class="mode-wrapper">
+    <view class="mode-item left-radius {{mode==0?'mode-item-selected':''}}" data-mode="0" bindtap='switchMode'>模糊查询</view>
+    <view class="mode-item right-radius {{mode==1?'mode-item-selected':''}}" data-mode="1" bindtap='switchMode'>精准查询</view>
+  </view>
+</view>
+
+
+<view class="list ">
+  <view class="item" wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" wx:key="id">
+    <view class="item-wrapper">
+      <view class="sub-item-info">
+        <view class="sub-item {{subidx==0?'sub-item0':''}}" wx:for="{{item.chat_content}}" wx:for-index="subidx" wx:for-item="subitem" wx:key="id" data-item="{{subitem}}" bindtap='copytext'>
+          <image class='sex' src='{{(subitem.ans_sex==1 ? "../../assets/images/sex_male.png ":"../../assets/images/sex_female.png ")}}'></image>
+          <view class="desp ">{{subitem.content}}</view>
+          <image class='copy' src='../../assets/images/copy.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="more {{ loadstatus == undefined  ? 'more-loadend' : ''}}" bindtap='showList'>
+    {{ loadstatus == undefined ? "海量话术赶快搜索吧~" : ""}} {{loadstatus == 0 ? "加载中..." : ""}} {{loadstatus == 1 ? "加载更多" : ""}} {{loadstatus == 2 ? "没有搜索到相关话术" : ""}} {{loadstatus == 3 ? "加载失败，请重试" : ""}}
+  </view>
+</view>

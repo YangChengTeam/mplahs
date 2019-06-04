@@ -6,6 +6,7 @@
 
 .header image {
   width: 100%;
+  height: 453rpx;
 }
 
 .header .search {

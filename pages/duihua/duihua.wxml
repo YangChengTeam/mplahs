@@ -1,0 +1,18 @@
+<!--pages/duihua/duihua.wxml-->
+<view class="list">
+  <view class="item" wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" wx:key="id" data-item="{{item}}">
+    <view class="item-wrapper">
+      <view class="top-header">
+        <view class="top-header-bg"></view>
+        <view class="top-header-title" >{{item.name}}</view>
+      </view>
+
+      <view class="sub-item-info">
+          <view bindtap='nav2duihuaDetail' class="sub-item" wx:for="{{item.children}}" wx:for-index="subidx" wx:for-item="subitem" wx:key="id" data-item="{{subitem}}">{{subitem.name}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="more">
+   
+  </view>
+</view>

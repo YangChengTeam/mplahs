@@ -1,11 +1,13 @@
 /* pages/school/article_detail.wxss */
 
 .title {
-   height: 120rpx;
-   font-size: 36rpx;
+   height: 80rpx;
+   font-size: 34rpx;
    color: #000;
-   line-height: 120rpx;
+   line-height: 80rpx;
    padding-left: 30rpx;
+   width: 600rpx;
+   overflow: hidden;
 }
 
 .content {

@@ -1,0 +1,40 @@
+/* pages/school/school_detail.wxss */
+
+page {
+  background: #f5f5f5;
+}
+
+.q {
+  background: #fff;
+  padding: 30rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.q view {
+  margin-left: 20rpx;
+  font-size: 34rpx;
+  width: 640rpx;
+  overflow: hidden;
+}
+
+.a {
+  background: #fff;
+  margin-top: 40rpx;
+}
+
+image {
+  width: 34rpx;
+  height: 34rpx;
+  margin-top: 8rpx;
+}
+
+.a image {
+  margin-left: 30rpx;
+  margin-top: 20rpx;
+}
+
+.a view {
+  width: 690rpx;
+  margin: 30rpx;
+}

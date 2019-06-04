@@ -1,0 +1,73 @@
+/* pages/school/article_list.wxss */
+
+.choice-list {
+  width: 100%;
+  margin-top: 30rpx;
+}
+
+.choice-item {
+   width: 100%;
+   padding: 30rpx;
+   border-bottom: solid #f5f5f5 1px;
+   font-size: 30rpx;
+   display: flex;
+   flex-direction: row;
+}
+
+.choice-item image {
+   height: 120rpx;
+   width: 200rpx;
+   overflow: hidden;
+}
+
+.choice-item-content {
+   width: 480rpx;
+   margin-left: 30rpx;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+}
+
+.choice-item-content-warrper {
+   display: flex;
+   flex-direction: row;
+   margin-top: 20rpx;
+   width: 100%;
+   position: relative;
+}
+
+.choice-item-content-title {
+    margin-right: 30rpx;
+    height: 34rpx;
+    overflow: hidden;
+}
+
+.choice-item-content-like-count {
+    color: #b1b1b1;
+    font-size: 24rpx;
+}
+
+.choice-item-content-tag {
+   height: 40rpx;
+   line-height: 40rpx;
+   padding-left: 16rpx;
+   padding-right: 16rpx;
+   background: #70adf9;
+   border-radius: 20rpx;
+   position: absolute;
+   font-size: 26rpx;
+   right: 30rpx;
+   top: -10rpx;
+   color: #fff;
+}
+
+.choice-more {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.choice-more-loadend {
+  color: #ddd;
+}

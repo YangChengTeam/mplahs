@@ -1,0 +1,18 @@
+<!--pages/my/help.wxml-->
+<swiper>
+  <swiper-item>
+    <image src="../../assets/images/help1.png"></image>
+  </swiper-item>
+   <swiper-item>
+    <image src="../../assets/images/help2.png"></image>
+  </swiper-item>
+   <swiper-item>
+    <image src="../../assets/images/help3.png"></image>
+  </swiper-item>
+   <swiper-item>
+    <image src="../../assets/images/help4.png"></image>
+  </swiper-item>
+   <swiper-item>
+    <image src="../../assets/images/help5.png"></image>
+  </swiper-item>
+</swiper>

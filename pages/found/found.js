@@ -1,66 +1,48 @@
 // pages/found/found.js
-Page({
+const app = getApp();
+const ListPage = require('../../base/list_page.js')
+
+ListPage({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    this.pagesize = 6
 
+    this.setData({
+      statusBarHeight: app.statusBarHeight,
+      totalTopHeight: app.totalTopHeight
+    })
+
+    this.showList()
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  showList(){
+    this.loadData("/video/list/")
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  nav2list(e){
+    var type = e.currentTarget.dataset.type
+    wx.navigateTo({
+      url: '/pages/found/video_list?type=' + type,
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  nav2emoji(e) {
+    var type = e.currentTarget.dataset.type
+    wx.navigateTo({
+      url: '/pages/found/emoji?type=' + type,
+    })
   },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  nav2topic(e) {
+    var type = e.currentTarget.dataset.type
+    wx.navigateTo({
+      url: '/pages/found/video_topic?type=' + type,
+    })
   }
 })

@@ -1,0 +1,22 @@
+<!--pages/school/school_list.wxml-->
+<scroll-view scroll-x>
+  <view class="menu">
+    <view class="menu-item-wrapper" wx:for="{{menuList}}" wx:for-index="idx" wx:for-item="item" wx:key="id" bindtap='switchList' data-item="{{item}}">
+      <view class="menu-item {{ currentIndex==item.id ? 'selected' : ''}}">
+        <view class="menu-name">{{item.name}}</view>
+        <view class="menu-tag"></view>
+      </view>
+    </view>
+  </view>
+</scroll-view>
+
+<view class="list">
+  <view style='height:60rpx;'></view>
+  <view class="item" wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" wx:key="id" bindtap='nav2schoolDetail' data-item="{{item}}">
+    <view class="name">{{item.post_title}}</view>
+    <view class="like">{{item.post_like}}觉得有用</view>
+  </view>
+  <view class="more {{loadstatus == 2 ? 'more-loadend' : ''}}" bindtap='showList'>
+    {{loadstatus == 0 ? "加载中..." : ""}} {{loadstatus == 1 ? "加载更多" : ""}} {{loadstatus == 2 ? "到底了" : ""}} {{loadstatus == 3 ? "加载失败，请重试" : ""}}
+  </view>
+</view>

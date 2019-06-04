@@ -1,0 +1,25 @@
+<!--pages/found/video_list.wxml-->
+<view class="list">
+  <view class="item" wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" wx:key="id" bindtap='nav2video' data-item="{{item}}">
+    <view class="{{idx%2==0?'item-wrapper':'item-wrapper item-wrapper2'}}">
+    <image src='{{item.image}}'></image>
+    <view class="title">{{item.title}}</view>
+    <view class="video-info">
+      <view class="video-info-left">
+        <image class="avatar" src='{{item.avatar_url}}'></image>
+        <view>{{item.nickname}}</view>
+      </view>
+      <view class="video-info-right">
+        <image src='../../assets/images/video_play_min2.png'></image>
+        <view>{{item.like_num}}</view>
+      </view>
+    </view>
+    </view>
+  </view>
+   <view class="more {{loadstatus == 2 ? 'more-loadend' : ''}}" bindtap='showList'>
+    {{loadstatus == 0 ? "加载中..." : ""}} 
+    {{loadstatus == 1 ? "加载更多" : ""}} 
+    {{loadstatus == 2 ? "到底了" : ""}} 
+    {{loadstatus == 3 ? "加载失败，请重试" : ""}}
+  </view>
+</view>

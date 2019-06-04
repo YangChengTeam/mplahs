@@ -1,0 +1,8 @@
+<!--pages/qinghua/qinghua_detail.wxml-->
+<view class="list">
+  <view class="item {{idx%2==0 ? '': 'item2'}}" wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" wx:key="id" bindtap='nav2qinghuaDetail' data-item="{{item}}">
+    <image src='{{(item.ans_sex==1 ? "../../assets/images/boy.jpeg":"../../assets/images/girl.jpeg")}}'></image>
+    <view class="name">{{item.content}}</view>
+  </view>
+
+</view>

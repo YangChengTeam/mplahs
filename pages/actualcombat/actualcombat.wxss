@@ -1,1 +1,39 @@
 /* pages/actualcombat/actualcombat.wxss */
+
+.list {
+  width: 100%;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  border-top: solid #f0f0f0 1px;
+  align-items: center;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+  font-size: 30rpx;
+  color: #000;
+}
+
+.item image {
+   width: 80rpx;
+   height: 80rpx;
+   margin-left: 20rpx;
+}
+
+.title {
+  margin-left: 30rpx;
+  width: 580rpx;
+}
+
+.more {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  text-align: center;
+  border-top: solid #f0f0f0 1px;
+}
+
+.more-loadend {
+  color: #ddd;
+}

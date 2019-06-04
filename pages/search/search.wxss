@@ -1,0 +1,175 @@
+/* pages/search/search.wxss */
+
+page {
+  background: #f5f5f5;
+}
+
+.search {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+
+.search-wrapper {
+  margin-left: 20rpx;
+  margin-right: 10rpx;
+  width: 580rpx;
+  background: #fff;
+  border-radius: 10rpx;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-wrapper input {
+  font-size: 30rpx;
+}
+
+.input-placeholder {
+   font-size: 30rpx;
+}
+
+.search-wrapper image {
+  width: 36rpx;
+  height: 36rpx;
+  margin-left: 20rpx;
+}
+
+.search-wrapper input {
+  margin-left: 20rpx;
+  height: 100%;
+  width: 480rpx;
+}
+
+.search-btn {
+  background: #fd445c;
+  color: #fff;
+  font-size: 30rpx;
+  text-align: center;
+  width: 120rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 20rpx;
+  margin-right: 20rpx;
+}
+
+.mode {
+   margin-top: 20rpx;
+   background: #fff;
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   height: 100rpx;
+}
+
+.mode-wrapper {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   border: solid 1px #fd445c;
+   font-size: 28rpx;
+   height: 60rpx;
+   border-radius: 30rpx;
+
+}
+
+.mode-item {
+   width: 50%;
+   background: #fff;
+   color: #fd445c;
+   padding-left: 50rpx;
+   padding-right: 50rpx;
+   height: 100%;
+   line-height: 60rpx;
+}
+
+.left-radius {
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+}
+
+.right-radius {
+  border-top-right-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+}
+
+.mode-item-selected {
+   background: #fd445c;
+   color: #fff;
+}
+
+
+.list {
+  width: 100%;
+  background: #fff;
+}
+
+.item {
+  width: 100%;
+  margin-bottom: 30rpx;
+}
+
+.item-wrapper {
+  margin-left: 30rpx;
+  width: 690rpx;
+  border-radius: 10rpx;
+  background: #fff;
+  box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.3);
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+
+.sub-item-info {
+  font-size: 26rpx;
+  color: #000;
+  flex-wrap: wrap;
+}
+
+.sub-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
+  position: relative;
+}
+
+.sub-item0 {
+   font-weight: bold;
+}
+
+.copy {
+  width: 32rpx;
+  height: 32rpx;
+  position: absolute;
+  right: 40rpx;
+}
+
+.sex {
+  width: 23rpx;
+  height: 25rpx;
+  margin-left: 20rpx;
+}
+
+.desp {
+  width: 560rpx;
+  margin-left: 10rpx;
+}
+
+.more {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  text-align: center;
+  background: rgba(0, 0, 0, 0);
+}
+
+.more-loadend {
+  color: #fd445c;
+  font-size: 26rpx;
+}

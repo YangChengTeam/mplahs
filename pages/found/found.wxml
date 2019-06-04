@@ -1,2 +1,46 @@
 <!--pages/found/found.wxml-->
-<text>pages/found/found.wxml</text>
+<view class="bar">
+  <view class="statusBar" style='height: {{statusBarHeight}}px; width:750rpx;'>
+  </view>
+  <view class="menu" style='color:{{color}};line-height: {{titleBarHeight}}px;height: {{titleBarHeight}}px; width:750rpx;'>
+    <view class="menu-item">
+      <image src='../../assets/images/bz.png' data-type="1" bindtap='nav2list'></image>
+      <view>视频壁纸</view>
+    </view>
+    <view class="menu-item" data-type="2" bindtap='nav2list'>
+      <image src='../../assets/images/call_video.png'></image>
+      <view>来电视频</view>
+    </view>
+    <view wx-if="{{false}}" class="menu-item" data-type="3" bindtap='nav2emoji'>
+      <image src='../../assets/images/expression.png'></image>
+      <view>表情包</view>
+    </view>
+    <view wx-if="{{false}}" class="menu-item menu-item-last" data-type="4" bindtap='nav2topic'>
+      <image src='../../assets/images/video_search.png'></image>
+      <view>话题</view>
+    </view>
+  </view>
+</view>
+<view style='background:#fff;height: {{totalTopHeight}}px; width:750rpx; '>
+</view>
+<view class="list">
+  <view class="item" wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" wx:key="id" bindtap='nav2video' data-item="{{item}}">
+    <view class="{{idx%2==0?'item-wrapper':'item-wrapper item-wrapper2'}}">
+      <image src='{{item.image}}'></image>
+      <view class="title">{{item.title}}</view>
+      <view class="video-info">
+        <view class="video-info-left">
+          <image class="avatar" src='{{item.avatar_url}}'></image>
+          <view>{{item.nickname}}</view>
+        </view>
+        <view class="video-info-right">
+          <image src='../../assets/images/video_play_min2.png'></image>
+          <view>{{item.like_num}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="more {{loadstatus == 2 ? 'more-loadend' : ''}}" bindtap='showList'>
+    {{loadstatus == 0 ? "加载中..." : ""}} {{loadstatus == 1 ? "加载更多" : ""}} {{loadstatus == 2 ? "到底了" : ""}} {{loadstatus == 3 ? "加载失败，请重试" : ""}}
+  </view>
+</view>

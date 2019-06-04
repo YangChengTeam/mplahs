@@ -5,14 +5,27 @@
     "pages/found/found",
     "pages/school/school",
     "pages/my/my",
-    "pages/school/article_detail"
+    "pages/school/article_detail",
+    "pages/found/video_detail",
+    "pages/found/video_list",
+    "pages/found/emoji",
+    "pages/found/emoji_list",
+    "pages/found/video_topic",
+    "pages/school/school_list",
+    "pages/school/article_list",
+    "pages/school/school_detail",
+    "pages/my/help",
+    "pages/duihua/duihua",
+    "pages/duihua/duihua_detail",
+    "pages/qinghua/qinghua",
+    "pages/qinghua/qinghua_detail",
+    "pages/search/search"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTextStyle": "black",
-    "navigationStyle": "custom",
-    "enablePullDownRefresh": true
+    "navigationStyle": "custom"
   },
   "tabBar": {
     "color": "#a9a9a9",

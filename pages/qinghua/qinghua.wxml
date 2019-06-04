@@ -1,0 +1,18 @@
+<!--pages/qinghua/qinghua.wxml-->
+<view class="header-bg">
+  <image src="../../assets/images/home_qinghua_banner.png"></image>
+</view>
+
+<view class="top-header article-category-header">
+  <view class="top-header-bg"></view>
+  <view class="top-header-title">为你推荐</view>
+</view>
+
+<view class="list">
+  <view class="item" wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" wx:key="id" bindtap='nav2qinghuaDetail' data-item="{{item}}">
+    <view class="name">{{item.chat_name}}</view>
+  </view>
+  <view class="more {{loadstatus == 2 ? 'more-loadend' : ''}}" bindtap='showList'>
+    {{loadstatus == 0 ? "加载中..." : ""}} {{loadstatus == 1 ? "加载更多" : ""}} {{loadstatus == 2 ? "到底了" : ""}} {{loadstatus == 3 ? "加载失败，请重试" : ""}}
+  </view>
+</view>

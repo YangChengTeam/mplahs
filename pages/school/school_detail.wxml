@@ -1,0 +1,12 @@
+<!--pages/school/school_detail.wxml-->
+<view class="q">
+   <image src='../../assets/images/ask.png'></image>
+   <view>{{info.post_title}}</view>
+</view>
+<view class="a">
+   <image src='../../assets/images/answer.png'></image>
+   <view>
+   <rich-text nodes="{{info.post_content}}"></rich-text>
+   </view>
+</view>
+

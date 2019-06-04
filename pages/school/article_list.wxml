@@ -1,0 +1,18 @@
+<!--pages/school/article_list.wxml-->
+<view class="choice-list">
+  <view class="choice-item" wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" wx:key="id" bindtap='nav2detail' data-item="{{item}}">
+    <view class="choice-item-image-warrper">
+      <image src='{{item.image}}'></image>
+    </view>
+    <view class="choice-item-content">
+      <view class="choice-item-content-title">{{item.post_title}}</view>
+      <view class="choice-item-content-warrper">
+        <view class="choice-item-content-like-count">{{item.post_like}}人觉得有用</view>
+        <!-- <view class="choice-item-content-tag">{{item.category_name}}</view> -->
+      </view>
+    </view>
+  </view>
+  <view class="choice-more {{loadstatus == 2 ? 'choice-more-loadend' : ''}}" bindtap='showList'>
+    {{loadstatus == 0 ? "加载中..." : ""}} {{loadstatus == 1 ? "加载更多" : ""}} {{loadstatus == 2 ? "到底了" : ""}} {{loadstatus == 3 ? "加载失败，请重试" : ""}}
+  </view>
+</view>

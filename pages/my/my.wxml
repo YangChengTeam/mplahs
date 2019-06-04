@@ -1,2 +1,23 @@
-<!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="user-center">
+  <image src='../../assets/images/qinghua_bg4.png'></image>
+  <view class="avatar">
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view class="name">
+    <open-data type="userNickName"></open-data>
+  </view>
+</view>
+
+<!-- <view class="menu">
+  <view class="item" bindtap='nav2help'>
+    <image class="icon" src='../../assets/images/user_help.png'></image>
+    <view>使用帮助</view>
+    <image class="arrow" src='../../assets/images/arrow_right.png'></image>
+  </view>
+</view> -->
+
+<view class="version">
+   <view class="info">
+       当前版本: v1.0.2
+   </view>
+</view>

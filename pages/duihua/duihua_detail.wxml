@@ -1,0 +1,18 @@
+<!--pages/duihua/duihua_detail.wxml-->
+<!--pages/duihua/duihua.wxml-->
+<view class="list">
+  <view class="item" wx:for="{{list}}" wx:for-index="idx" wx:for-item="item" wx:key="id" data-item="{{item}}">
+    <view class="item-wrapper">
+      <view class="sub-item-info">
+        <view class="sub-item" wx:for="{{item.chat_content}}" wx:for-index="subidx" wx:for-item="subitem" wx:key="id" data-item="{{subitem}}" bindtap='copytext'>
+          <image class='sex' src='{{subitem.ans_sex==0 ?"../../assets/images/sex_unknown.png": (subitem.ans_sex==1 ? "../../assets/images/sex_male.png":"../../assets/images/sex_female.png")}}'></image>
+          <view class="desp">{{subitem.content}}</view>
+          <image class='copy' src='../../assets/images/copy.png'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="more {{loadstatus == 2 ? 'more-loadend' : ''}}" bindtap='showList'>
+    {{loadstatus == 0 ? "加载中..." : ""}} {{loadstatus == 1 ? "加载更多" : ""}} {{loadstatus == 2 ? "到底了" : ""}} {{loadstatus == 3 ? "加载失败，请重试" : ""}}
+  </view>
+</view>

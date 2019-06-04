@@ -1,2 +1,31 @@
 <!--pages/school/school.wxml-->
-<text>pages/school/school.wxml</text>
+
+<view class="header-bg">
+  <image src="../../assets/images/qinghua_bg.png"></image>
+</view>
+
+<view class="category-list">
+  <view class="category-item" wx:for="{{category}}" wx:for-index="idx" wx:for-item="item" wx:key="id" bindtap='nav2list' data-item="{{item}}">
+    <image src="{{item.image}}"></image>
+    <view>{{item.name}}</view>
+  </view>
+</view>
+
+<view class="article-category-list">
+  <view class="article-category-item" wx:for="{{articleCategory}}" wx:for-index="idx" wx:for-item="item" wx:key="id"  data-item="{{item}}">
+    <view class="top-header article-category-header">
+      <view class="top-header-bg"></view>
+      <view class="top-header-title">{{item.name}}</view>
+    </view>
+    <view class="article-category-sub-item-info">
+      <view class="article-category-sub-item" wx:for="{{item.children}}" wx:for-index="subidx" wx:for-item="subitem" wx:key="id" bindtap='nav2article' data-item="{{subitem}}">
+        <view class="{{subidx%2==0?'article-category-sub-item-info-wrapper':'article-category-sub-item-info-wrapper article-category-sub-item-info-wrapper2'}}">
+          <image src='{{subitem.image}}'></image>
+          <view class="mask"></view>
+          <view class="name">{{subitem.name}}</view>
+        </view>
+        <view class="{{subidx%2==0?'article-category-sub-item-desp':'article-category-sub-item-desp2'}}">{{subitem.description}}</view>
+      </view>
+    </view>
+  </view>
+</view>

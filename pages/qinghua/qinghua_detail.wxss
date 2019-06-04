@@ -1,0 +1,30 @@
+/* pages/qinghua/qinghua_detail.wxss */
+
+.item {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30rpx;
+}
+
+.item image {
+   width: 80rpx;
+   height: 80rpx;
+   margin-left: 10rpx;
+}
+
+.item2 image {
+  margin-right: 10rpx;
+}
+
+.name {
+   background: #dbf3fd;
+   color: #000;
+   font-size: 30rpx;
+   border-radius: 5rpx;
+   padding: 20rpx;
+   margin-left: 10rpx;
+}
+
+.item2 {
+  flex-direction:row-reverse;
+}
