@@ -9,7 +9,9 @@ const request = require('../libs/kk/request.js')
 var ListPage = function(obj) {
   obj.page = 0
   obj.pagesize = 10
+  obj.data = {}
   obj.data.list = []
+  
   obj.loadData = async function(path, process) {
     if (this.nopage) return
     if (this.data.loadstatus == 2) {
@@ -19,26 +21,23 @@ var ListPage = function(obj) {
     this.setData({
       loadstatus: 0
     })
+
     var data = await request.get(config.BASE_URL + path + (++this.page))
     if (data && data.data && data.data.data) {
       if (process) {
         process(data.data.data)
       }
+      var loadstatus = 1
       if (data.data.data && data.data.data.length < this.pagesize) {
-        console.log("+++")
-        this.setData({
-          list: [...this.data.list, ...data.data.data],
-          loadstatus: 2
-        })
-        return
+        loadstatus = 2
       }
       this.setData({
         list: [...this.data.list, ...data.data.data],
-        loadstatus: 1
+        loadstatus: loadstatus
       })
     } else {
       this.page--
-        this.setData({
+      this.setData({
           loadstatus: 3
         })
     }

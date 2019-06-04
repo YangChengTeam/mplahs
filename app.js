@@ -20,13 +20,10 @@ App({
     } 
     str = str.replace(/<p>/g, "<p style=\"line-height:1.6;margin-bottom:20px; display:block;>")
 
-   
     return str
   },
   dealwithHtml2(str) {
-   
     str = str.replace(/<p>/g, "<p style=\"line-height:1.6;margin-bottom:20px; display:block;\">")
-   
     return str
   }
 })

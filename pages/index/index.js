@@ -1,39 +1,31 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
-const regeneratorRuntime = global.regeneratorRuntime = require('../../libs/runtime')
-
 const ListPage = require('../../base/list_page.js')
 
-
-
 ListPage({
-  data: {
-    list: []
-  },
-  async onLoad() {
+  onLoad() {
     this.showList()
   },
-  showList(){
+  showList() {
     this.loadData("/school/articleNews/")
   },
-  nav2duihua(){
-     wx.navigateTo({
-       url: '/pages/duihua/duihua',
-     })
+  nav2duihua() {
+    wx.navigateTo({
+      url: '/pages/duihua/duihua',
+    })
   },
-  re2tab1(){
+  re2tab1() {
     wx.switchTab({
       url: "/pages/actualcombat/actualcombat",
     })
   },
-  nav2qinghua(){
+  nav2qinghua() {
     wx.navigateTo({
       url: '/pages/qinghua/qinghua',
     })
   },
-  nav2search(){
+  nav2search() {
     wx.navigateTo({
       url: '/pages/search/search',
     })
