@@ -36,5 +36,5 @@ image {
 
 .a view {
   width: 690rpx;
-  margin: 30rpx;
+  padding: 30rpx;
 }
